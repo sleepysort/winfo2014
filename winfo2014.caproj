@@ -9,7 +9,12 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3cj58xhng2fgw</unique-id>
     <saved-with-version>18400</saved-with-version>
-    <used-plugins />
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
     <used-behaviors />
     <used-effects />
     <configurations>
@@ -37,7 +42,68 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
+    <object-folder>
+        <object-type name="Button" sid="8343053638036543">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Button2" sid="3879717437819245">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Button3" sid="4348469467368893">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite" sid="6188065199792102">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7877901297555538" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="1406202688175859">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3114688793034545" speed="5">
+                    <frame duration="1" hotspotX="0.355" hotspotY="0.208372" original-source="C:\Users\Max\projects\winfo2014\assets\world.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.205521" />
+                            <point x="1" y="0.171779" />
+                            <point x="0.354776" y="0.779141" />
+                            <point x="0" y="0.601227" />
+                            <point x="0" y="0.205521" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="4027031037637196">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1441490733426059" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="2413191216084822">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7287153551823362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="6944658479625797">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ProgressBar" sid="8537180682185365">
+            <plugin id="progressbar" />
+        </object-type>
+        <object-type name="Text2" sid="3155097009836279">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
