@@ -28,24 +28,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
+<<<<<<< HEAD
         <folder expanded="0" path="object-folder/Buttons/" />
         <folder expanded="1" path="object-folder/GameData/" />
+=======
+>>>>>>> 21f8ccc1aeb00c9ba806e930b1ed0fd0e55b057d
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/SendVolunteers/" />
-        <folder expanded="1" path="animation-folder/SendProfs/" />
-        <folder expanded="1" path="animation-folder/Supplies/" />
-        <folder expanded="1" path="animation-folder/FoodWater/" />
-        <folder expanded="1" path="animation-folder/AssessDmg/" />
-        <folder expanded="1" path="animation-folder/FixRoads/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/Sprite5/" />
-        <folder expanded="1" path="animation-folder/Sprite6/" />
-        <folder expanded="1" path="animation-folder/ButtonSprite/" />
     </folders-expanded>
 </c2uistate>
