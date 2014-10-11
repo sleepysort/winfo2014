@@ -4,7 +4,7 @@
     <name>Menu</name>
     <events>
         <variable constant="1" name="TIME_LIMIT2" sid="6168717944944662" static="0" type="number">14</variable>
-        <variable constant="1" name="SECONDS_IN_DAY2" sid="7406765100079409" static="0" type="number">30</variable>
+        <variable constant="1" name="SECONDS_IN_DAY2" sid="7406765100079409" static="0" type="number">10</variable>
         <variable constant="0" name="currTime2" sid="4511788199512443" static="0" type="number">14</variable>
         <event-block sid="6747535489899138">
             <conditions>
@@ -19,6 +19,130 @@
                 </action>
                 <action id="3" name="Set progress" sid="1636344618203986" type="ProgressBar">
                     <param id="0" name="Value">currTime</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9182462686990949">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="5813992760760176" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">AssessDmg</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="268667073572296" type="AssDmgTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="3301637985935071" type="AssDmgTimer">
+                    <param id="0" name="Duration">AssessDmg.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5538775673710984">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4010293051730771" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">FixRoads</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="1000270154658567" type="FixRTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="669538431559902" type="FixRTimer">
+                    <param id="0" name="Duration">FixRoads.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7246998264271602">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9813465879529801" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">FoodWater</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="4082283374806064" type="FoodTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="7253065582703886" type="FoodTimer">
+                    <param id="0" name="Duration">FoodWater.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3330627701880766">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1069523259298974" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SendProfs</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="2077731075895506" type="SendPTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="1719226863604511" type="SendPTimer">
+                    <param id="0" name="Duration">SendProfs.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4965257920961457">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9049019385118075" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">SendVolunteers</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="9889159428034135" type="SendVTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="7071988286400597" type="SendVTimer">
+                    <param id="0" name="Duration">SendVolunteers.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4697832703005083">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="3943671311454141" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Supplies</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set visible" sid="6802842544100664" type="SuppliesTimer">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="3377134725652139" type="SuppliesTimer">
+                    <param id="0" name="Duration">Supplies.Cooldown * SECONDS_IN_DAY</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8661093685395335">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9664297634878295" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set progress" sid="343749086767518" type="progress">
+                    <param id="0" name="Value">(progress.Timer.CurrentTime(&quot;cooldown&quot;) / (progress.cooldown * SECONDS_IN_DAY)) * 100</param>
                 </action>
             </actions>
         </event-block>

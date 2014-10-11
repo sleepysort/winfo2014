@@ -180,6 +180,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>3</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -202,6 +206,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>5</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -224,6 +232,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>2</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -246,6 +258,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>1</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -268,6 +284,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>4</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -290,6 +310,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <OnCooldown>false</OnCooldown>
+                        <Cooldown>3</Cooldown>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -328,9 +352,15 @@
                         <value>0</value>
                         <maximum>100</maximum>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <id-optional></id-optional>
                     </properties>
+                    <instance-variables>
+                        <cooldown>1</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -349,17 +379,131 @@
                         <value>0</value>
                         <maximum>100</maximum>
                         <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <id-optional></id-optional>
                     </properties>
+                    <instance-variables>
+                        <cooldown>2</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>14.995887756</x>
                         <y>87.993919373</y>
                         <z>0</z>
-                        <width>78.073913574</width>
-                        <height>17.097251892</height>
+                        <width>80.294998169</width>
+                        <height>16.315000534</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="SuppliesTimer" uid="27">
+                    <properties>
+                        <value>0</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <instance-variables>
+                        <cooldown>1</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>13.800674438</x>
+                        <y>124.711532593</y>
+                        <z>0</z>
+                        <width>80.294998169</width>
+                        <height>16.315000534</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="FoodTimer" uid="29">
+                    <properties>
+                        <value>0</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <instance-variables>
+                        <cooldown>1</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>13.800430298</x>
+                        <y>162.959533691</y>
+                        <z>0</z>
+                        <width>80.294998169</width>
+                        <height>16.315000534</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="AssDmgTimer" uid="30">
+                    <properties>
+                        <value>0</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <instance-variables>
+                        <cooldown>3</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14.48374939</x>
+                        <y>197.793228149</y>
+                        <z>0</z>
+                        <width>80.294998169</width>
+                        <height>16.315000534</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="FixRTimer" uid="31">
+                    <properties>
+                        <value>0</value>
+                        <maximum>100</maximum>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <id-optional></id-optional>
+                    </properties>
+                    <instance-variables>
+                        <cooldown>4</cooldown>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14.482696533</x>
+                        <y>232.627471924</y>
+                        <z>0</z>
+                        <width>80.294998169</width>
+                        <height>16.315000534</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

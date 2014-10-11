@@ -10,10 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Layout 1</layout>
+        <layout>Layout 1</layout>
         <layout>MenuTest</layout>
+        <layout>StartScreen</layout>
         <event-sheet>Event sheet 1</event-sheet>
-        <event-sheet>Menu</event-sheet>
+        <event-sheet active="1">Menu</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -21,7 +22,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
-    <families-expanded root="1" />
+    <families-expanded root="1">
+        <family expanded="1" name="progress" />
+        <family expanded="1" name="buttonz" />
+    </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="object-folder/Buttons/" />
