@@ -288,6 +288,24 @@
         <object-type name="Mouse" sid="8951444733751483">
             <plugin id="Mouse" />
         </object-type>
+        <object-type name="Text" sid="4388127295470929">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="6061825924025527">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="3226017673898068">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="4127310037176633">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text5" sid="7310380490385828">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text6" sid="3491631662420826">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="progress" plugin-id="progressbar" sid="9450234086724604">
