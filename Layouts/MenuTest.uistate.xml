@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>312.26</position-x>
-        <position-y>138.497</position-y>
-        <position-z>91.0982</position-z>
-        <lookat-x>312.26</lookat-x>
-        <lookat-y>138.497</lookat-y>
+        <position-x>177</position-x>
+        <position-y>141.618</position-y>
+        <position-z>56.4474</position-z>
+        <lookat-x>177</lookat-x>
+        <lookat-y>141.618</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -20,12 +20,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <properties>
         <property expanded="1" name="Layout properties" />
         <property expanded="0" name="Layout Size" />
-        <property expanded="1" name="Margins" />
+        <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Layer 1" />
+    <active-layer name="MenuSidebar" />
     <layers>
-        <layer locked="0" name="Layer 0" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Layer 1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Layer 0" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Layer 1" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Layer 2" parallax-in-editor="0" visible="0" />
+        <layer locked="0" name="MenuSidebar" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="MenuTimer" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Layer 2" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>

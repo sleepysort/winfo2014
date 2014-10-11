@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <variable constant="1" name="TIME_LIMIT2" sid="6168717944944662" static="0" type="number">14</variable>
+        <variable constant="1" name="SECONDS_IN_DAY2" sid="7406765100079409" static="0" type="number">30</variable>
+        <variable constant="0" name="currTime2" sid="4511788199512443" static="0" type="number">14</variable>
+        <event-block sid="6747535489899138">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3525335722990498" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="7723147568677891" type="System">
+                    <param id="0" name="Variable">currTime</param>
+                    <param id="1" name="Value">1 / SECONDS_IN_DAY</param>
+                </action>
+                <action id="3" name="Set progress" sid="1636344618203986" type="ProgressBar">
+                    <param id="0" name="Value">currTime</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
