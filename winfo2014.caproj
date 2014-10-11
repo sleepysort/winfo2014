@@ -12,12 +12,15 @@
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
-    <used-behaviors>
-        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-    </used-behaviors>
-    <used-effects />
+    <used-behaviors />
+    <used-effects>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -44,141 +47,11 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Buttons">
-            <object-type name="SendVolunteers" sid="499602666091954">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7885145936107342" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\SendVolun.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="SendProfs" sid="4496585963151039">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4175132984403131" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\SendProf.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Supplies" sid="2574706988802679">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8474311984574431" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\Supplies.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="FoodWater" sid="553600307661597">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3799327494634792" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\Sustenance.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="AssessDmg" sid="2144641073745492">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8033931358939381" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\AssessDmg.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="FixRoads" sid="6414890543168434">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3486445257537494" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Buttons\FixRoads.png">
-                            <collision-poly>
-                                <point x="0.0227273" y="0.0857143" />
-                                <point x="0.5" y="0" />
-                                <point x="0.977273" y="0.0857143" />
-                                <point x="1" y="0.485714" />
-                                <point x="0.977273" y="0.914286" />
-                                <point x="0.5" y="1" />
-                                <point x="0.0227273" y="0.914286" />
-                                <point x="0" y="0.485714" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="SendVTimer" sid="9818065981727674">
-                <plugin id="progressbar" />
-            </object-type>
-            <object-type name="SendPTimer" sid="1647109101894084">
-                <plugin id="progressbar" />
-            </object-type>
-            <object-type name="ProgressBar2" sid="8123524446543736">
-                <plugin id="progressbar" />
-            </object-type>
-        </object-folder>
         <object-type name="Button" sid="8343053638036543">
             <plugin id="Button" />
         </object-type>
         <object-type name="Button2" sid="3879717437819245">
             <plugin id="Button" />
-            <behaviors>
-                <behavior-type name="Timer" sid="5769023835146405">
-                    <behavior id="Timer" />
-                </behavior-type>
-            </behaviors>
         </object-type>
         <object-type name="Button3" sid="4348469467368893">
             <plugin id="Button" />
@@ -225,57 +98,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text" sid="6944658479625797">
+            <plugin id="Text" />
+        </object-type>
         <object-type name="ProgressBar" sid="8537180682185365">
             <plugin id="progressbar" />
         </object-type>
-        <object-type name="Sprite5" sid="8576314054158268">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9393230526774928" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\startscreen.png" />
-                </animation>
-            </animation-folder>
+        <object-type name="Text2" sid="3155097009836279">
+            <plugin id="Text" />
         </object-type>
-        <object-type name="ButtonBar" sid="6703431327497434">
-            <plugin id="progressbar" />
+        <object-type name="TextBox" sid="4824349708459654">
+            <plugin id="TextBox" />
         </object-type>
-        <object-type name="Sprite6" sid="1926839830983795">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8743647780691134" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-type name="Text3" sid="3890097066250148">
+            <plugin id="Text" />
         </object-type>
-        <object-type name="ButtonSprite" sid="7717657309809969">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5146982577132424" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.514286" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\Assets\Graphics\Button.png">
-                        <collision-poly>
-                            <point x="0.0227273" y="0.0857143" />
-                            <point x="0.5" y="0" />
-                            <point x="0.977273" y="0.0857143" />
-                            <point x="1" y="0.485714" />
-                            <point x="0.977273" y="0.914286" />
-                            <point x="0.5" y="1" />
-                            <point x="0.0227273" y="0.914286" />
-                            <point x="0" y="0.485714" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
+        <object-type name="Text4" sid="1442922487633501">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TiledBackground" sid="1028613342423909">
+            <plugin id="TiledBg" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
+            <texture />
+        </object-type>
+        <object-type name="Text5" sid="4615406042706403">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
-        <layout>MenuTest.xml</layout>
-        <layout>StartScreen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Menu.xml</event-sheet>
     </event-folder>
     <global-instances />
     <sounds-folder />

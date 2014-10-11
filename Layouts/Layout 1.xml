@@ -13,10 +13,63 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="3283089697633809">
+        <layer name="background" sid="8734247071445393">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="TiledBackground" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="WaterBackground">
+                            <parameters>
+                                <angle>7</angle>
+                                <delta>20</delta>
+                                <emboss>0.2</emboss>
+                                <frequency>1</frequency>
+                                <intensity>10</intensity>
+                                <reflectivity>600</reflectivity>
+                                <speed>0.01</speed>
+                                <x-speed>0.05</x-speed>
+                                <y-speed>0.05</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-111</x>
+                        <y>-49</y>
+                        <z>0</z>
+                        <width>1050</width>
+                        <height>598</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="map" sid="3283089697633809">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -38,8 +91,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277</x>
-                        <y>11</y>
+                        <x>315</x>
+                        <y>-2</y>
                         <z>0</z>
                         <width>1389.630615234</width>
                         <height>746.926513672</height>
@@ -53,7 +106,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Layer 1" sid="8234037451186879">
+        <layer name="system" sid="8234037451186879">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -78,11 +131,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11</x>
-                        <y>239</y>
+                        <x>59</x>
+                        <y>237.5</y>
                         <z>0</z>
-                        <width>198</width>
-                        <height>586</height>
+                        <width>144</width>
+                        <height>479</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -117,22 +170,19 @@
                 <instance type="Button2" uid="1">
                     <properties>
                         <type>Button</type>
-                        <text>Option</text>
-                        <tooltip></tooltip>
+                        <text>Send Volunteers</text>
+                        <tooltip>Provide temporary shelters, clean the area</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
                         <auto-font-size>Yes</auto-font-size>
                         <id-optional></id-optional>
                         <checked>No</checked>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11</x>
-                        <y>70</y>
+                        <x>21</x>
+                        <y>66</y>
                         <z>0</z>
                         <width>88.684837341</width>
                         <height>19.34941864</height>
@@ -175,16 +225,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>753</x>
-                        <y>251</y>
+                        <x>739</x>
+                        <y>238.5</y>
                         <z>0</z>
-                        <width>274</width>
-                        <height>684</height>
+                        <width>246</width>
+                        <height>499</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.899999976</opacity>
+                        <opacity>0.699999988</opacity>
                     </world>
                 </instance>
                 <instance type="Sprite4" uid="6">
@@ -197,14 +247,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>417</x>
-                        <y>-16</y>
+                        <x>428</x>
+                        <y>15.5</y>
                         <z>0</z>
-                        <width>1135</width>
-                        <height>104</height>
+                        <width>859</width>
+                        <height>41</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text" uid="7">
+                    <properties>
+                        <text>Human Assistance</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-12,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14</x>
+                        <y>46</y>
+                        <z>0</z>
+                        <width>104</width>
+                        <height>17</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -244,9 +321,6 @@
                         <id-optional></id-optional>
                         <checked>No</checked>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -284,6 +358,33 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
+                <instance type="Text" uid="11">
+                    <properties>
+                        <text>Evacuate</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>19</x>
+                        <y>316</y>
+                        <z>0</z>
+                        <width>74</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Button" uid="12">
                     <properties>
                         <type>Button</type>
@@ -319,9 +420,6 @@
                         <id-optional></id-optional>
                         <checked>No</checked>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -359,6 +457,33 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
+                <instance type="Text" uid="15">
+                    <properties>
+                        <text>Evacuate</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>20</x>
+                        <y>171</y>
+                        <z>0</z>
+                        <width>74</width>
+                        <height>22</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="ProgressBar" uid="16">
                     <properties>
                         <value>14</value>
@@ -380,7 +505,78 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
+                <instance type="Text2" uid="17">
+                    <properties>
+                        <text>Time Remaining:</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>196</x>
+                        <y>9</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Text4" uid="18">
+                    <properties>
+                        <text>Indonesia</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Century Gothic,-29,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>627</x>
+                        <y>50</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>50.000862122</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Layer 3" sid="1306648468971048">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>
