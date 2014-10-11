@@ -3,6 +3,14 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu</name>
     <events>
+        <variable constant="1" name="Interval" sid="2852219911678198" static="0" type="number">1</variable>
+        <variable constant="0" name="MissingPop" sid="4092024973751635" static="0" type="number">37000</variable>
+        <variable constant="0" name="HungryPop" sid="1057998959052837" static="0" type="number">350000</variable>
+        <variable constant="0" name="DisplacedPop" sid="721658841773854" static="0" type="number">315000</variable>
+        <variable constant="0" name="SickPop" sid="6161875415062629" static="0" type="number">220000</variable>
+        <variable constant="0" name="Hidden" sid="2305168205789455" static="0" type="number">1</variable>
+        <variable constant="0" name="Professionals" sid="8133160394499769" static="0" type="number">0</variable>
+        <variable constant="0" name="Volunteers" sid="5086464669534821" static="0" type="number">0</variable>
         <variable constant="1" name="TIME_LIMIT2" sid="6168717944944662" static="0" type="number">14</variable>
         <variable constant="1" name="SECONDS_IN_DAY2" sid="7406765100079409" static="0" type="number">10</variable>
         <variable constant="0" name="currTime2" sid="4511788199512443" static="0" type="number">14</variable>
@@ -38,6 +46,10 @@
                     <param id="0" name="Duration">AssessDmg.Cooldown * SECONDS_IN_DAY</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="4457921649680574" type="System">
+                    <param id="0" name="Variable">Hidden</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -96,6 +108,10 @@
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;cooldown&quot;</param>
                 </action>
+                <action id="-10" name="Add to" sid="1021777755929439" type="System">
+                    <param id="0" name="Variable">Professionals</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4965257920961457">
@@ -114,6 +130,10 @@
                     <param id="0" name="Duration">SendVolunteers.Cooldown * SECONDS_IN_DAY</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="4729838131768658" type="System">
+                    <param id="0" name="Variable">Volunteers</param>
+                    <param id="1" name="Value">5</param>
                 </action>
             </actions>
         </event-block>
@@ -134,6 +154,14 @@
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;cooldown&quot;</param>
                 </action>
+                <action id="-11" name="Subtract from" sid="3059892287023036" type="System">
+                    <param id="0" name="Variable">DisplacedPop</param>
+                    <param id="1" name="Value">300</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="9858177786526897" type="System">
+                    <param id="0" name="Variable">SickPop</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8661093685395335">
@@ -143,6 +171,37 @@
             <actions>
                 <action id="3" name="Set progress" sid="343749086767518" type="progress">
                     <param id="0" name="Value">(progress.Timer.CurrentTime(&quot;cooldown&quot;) / (progress.cooldown * SECONDS_IN_DAY)) * 100</param>
+                </action>
+                <action id="0" name="Set text" sid="8351197591196202" type="SickPop">
+                    <param id="0" name="Text">&quot;Sick : &quot; &amp; SickPop</param>
+                </action>
+                <action id="0" name="Set text" sid="2439625293033667" type="DisplacedPop">
+                    <param id="0" name="Text">&quot;Displaced :&quot; &amp; DisplacedPop</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8608973044745152">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="613763757969113" type="System">
+                    <param id="0" name="Interval (seconds)">INTERVAL</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="5201365263531681" type="System">
+                    <param id="0" name="Variable">DisplacedPop</param>
+                    <param id="1" name="Value">30 * Volunteers + 10 * Professionals</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="7989952966549529" type="System">
+                    <param id="0" name="Variable">MissingPop</param>
+                    <param id="1" name="Value">10 * Volunteers</param>
+                </action>
+                <action id="-10" name="Add to" sid="7690394192460333" type="System">
+                    <param id="0" name="Variable">HungryPop</param>
+                    <param id="1" name="Value">1000</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="696923556147488" type="System">
+                    <param id="0" name="Variable">SickPop</param>
+                    <param id="1" name="Value">20*Professionals</param>
                 </action>
             </actions>
         </event-block>

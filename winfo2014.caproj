@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
@@ -177,6 +178,17 @@
             </object-type>
             <object-type name="FixRTimer" sid="9540357996861136">
                 <plugin id="progressbar" />
+            </object-type>
+        </object-folder>
+        <object-folder name="GameData">
+            <object-type name="TotalPop" sid="5944919185321011">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="SickPop" sid="2608456147209527">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="DisplacedPop" sid="2417250362453807">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-type name="Button" sid="8343053638036543">
