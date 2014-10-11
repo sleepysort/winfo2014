@@ -22,35 +22,5 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="1442648934539575" title="Group">
-            <sub-events>
-                <variable constant="0" name="rand" sid="299226657548327" static="0" type="number">0</variable>
-                <event-block sid="7266944886286061">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="8176944985720186" type="System">
-                            <param id="0" name="Interval (seconds)">5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="375074244444884" type="System">
-                            <param id="0" name="Variable">rand</param>
-                            <param id="1" name="Value">random(5)</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="6398621024879962">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="4538398558201857" type="System">
-                                    <param id="0" name="Variable">rand</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
     </events>
 </c2eventsheet>
