@@ -475,5 +475,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8964365277752661">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2342424190383153" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="4953698934580886" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action id="3" name="Start" sid="561985888401943" type="Sprite8">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="6368791268355991" type="Sprite8">
+                    <param id="0" name="Speed">3</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

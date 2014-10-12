@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>StartScreen</name>
+    <events>
+        <event-block sid="1521051223131401">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2009536680657413" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">alpaca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="11" name="Set enabled" sid="5930533616179188" type="screen">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="542268179436744">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8422657498332117" type="Mouse">
+                    <param id="0" name="Object">alpaca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5913741979984461" type="alpaca">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="1140480988994707" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5249131438207172">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="8124345975740507" type="Mouse">
+                    <param id="0" name="Object">alpaca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3078214259697577" type="alpaca">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="2267075850512923" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8069879866265725">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5765309365841459" type="Mouse">
+                    <param id="0" name="Object">Sprite7</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4506117405515117" type="Sprite7" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="3595060188426016" type="Mouse">
+                    <param id="0" name="Cursor style">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8140311408576674">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9002545941924361" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite7</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="6468321551117946" type="Sprite7" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1434200415322478" type="System">
+                    <param id="0" name="Layout">&quot;MenuTest&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="419606043215735">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5924099247512387" type="screen">
+                    <param id="0" name="Object">Sprite6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8267578331312194" type="Sprite7">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

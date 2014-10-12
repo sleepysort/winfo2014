@@ -18,7 +18,9 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -192,6 +194,11 @@
                 <plugin id="Text" />
             </object-type>
         </object-folder>
+        <object-folder name="FeedText">
+            <object-type name="VolunteersAreOnTheirWay" sid="9420056314680257">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
         <object-type name="Button" sid="8343053638036543">
             <plugin id="Button" />
         </object-type>
@@ -307,6 +314,124 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="alpaca" sid="5772661997057703">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6197518508032699" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\alpaca.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\alpaca2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="4684133428624866">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7198438467390761" speed="5">
+                    <frame duration="1" hotspotX="0.501567" hotspotY="0.533333" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\screenholder.png">
+                        <collision-poly>
+                            <point x="0.0031348" y="0.0666667" />
+                            <point x="0.996865" y="0.0666667" />
+                            <point x="1" y="1" />
+                            <point x="0.498433" y="1" />
+                            <point x="0.0031348" y="0.933333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="screen" sid="5551514565460023">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="1748871597714269">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4020293810980176" speed="5">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.502146" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\screen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="4041878834727211">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8814736017292078">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9885088658118296" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="1097600846725508">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="8947382126882007">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6171180975312935" speed="5">
+                    <frame duration="1" hotspotX="0.500368" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\worldmap.png">
+                        <collision-poly>
+                            <point x="0.0442152" y="0.0955414" />
+                            <point x="0.499632" y="0.0923567" />
+                            <point x="0.781135" y="0.47293" />
+                            <point x="0.846721" y="0.66879" />
+                            <point x="0.499632" y="0.796178" />
+                            <point x="0.168755" y="0.63535" />
+                            <point x="0.148121" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="5736718987006492">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5311588674442798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer4.png">
+                        <collision-poly>
+                            <point x="0.314" y="0.5" />
+                            <point x="0.25" y="0.375" />
+                            <point x="0.226" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer8.png">
+                        <collision-poly>
+                            <point x="0.686" y="0.5" />
+                            <point x="0.71" y="0.275" />
+                            <point x="0.67" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer9.png">
+                        <collision-poly>
+                            <point x="0.812" y="0.47" />
+                            <point x="0.766" y="0.5" />
+                            <point x="0.798" y="0.495" />
+                            <point x="0.74" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer9.png">
+                        <collision-poly>
+                            <point x="0.812" y="0.47" />
+                            <point x="0.766" y="0.5" />
+                            <point x="0.798" y="0.495" />
+                            <point x="0.74" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="progress" plugin-id="progressbar" sid="9450234086724604">
@@ -351,6 +476,7 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Menu.xml</event-sheet>
+        <event-sheet>StartScreen.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="32" />

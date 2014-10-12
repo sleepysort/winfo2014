@@ -930,7 +930,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite3" uid="46">
+                <instance type="Sprite8" uid="46">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -940,16 +940,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>358</x>
-                        <y>426</y>
+                        <x>264</x>
+                        <y>201</y>
                         <z>0</z>
-                        <width>459</width>
-                        <height>94</height>
+                        <width>176.654693604</width>
+                        <height>90.226860046</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.899999976</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
