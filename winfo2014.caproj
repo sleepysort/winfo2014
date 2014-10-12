@@ -255,7 +255,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9393230526774928" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\winfo2014\assets\Graphics\startscreen.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\startscreen.png" />
                 </animation>
             </animation-folder>
         </object-type>
