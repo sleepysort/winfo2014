@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu</name>
     <events>
-        <variable constant="0" name="Budget" sid="6801321655799064" static="0" type="number">10000000</variable>
-        <variable constant="1" name="Interval" sid="2852219911678198" static="0" type="number">1</variable>
+        <variable constant="0" name="Budget" sid="6801321655799064" static="0" type="number">100000</variable>
+        <variable constant="1" name="INTERVAL" sid="2852219911678198" static="0" type="number">1</variable>
         <variable constant="0" name="MissingPop" sid="4092024973751635" static="0" type="number">37000</variable>
         <variable constant="0" name="HungryPop" sid="1057998959052837" static="0" type="number">350000</variable>
         <variable constant="0" name="DisplacedPop" sid="721658841773854" static="0" type="number">315000</variable>
@@ -36,16 +36,28 @@
                     <param id="2" name="Object clicked">AssessDmg</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="268667073572296" type="AssDmgTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="3301637985935071" type="AssDmgTimer">
-                    <param id="0" name="Duration">AssessDmg.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="5814162292064101">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6260216551800819" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">AssDmgTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="268667073572296" type="AssDmgTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="3301637985935071" type="AssDmgTimer">
+                            <param id="0" name="Duration">AssessDmg.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="5538775673710984">
             <conditions>
@@ -55,16 +67,28 @@
                     <param id="2" name="Object clicked">FixRoads</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="1000270154658567" type="FixRTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="669538431559902" type="FixRTimer">
-                    <param id="0" name="Duration">FixRoads.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="1782035286790219">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1683390953499223" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">FixRTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="1000270154658567" type="FixRTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="669538431559902" type="FixRTimer">
+                            <param id="0" name="Duration">FixRoads.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="7246998264271602">
             <conditions>
@@ -74,16 +98,28 @@
                     <param id="2" name="Object clicked">FoodWater</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="4082283374806064" type="FoodTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="7253065582703886" type="FoodTimer">
-                    <param id="0" name="Duration">FoodWater.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="9162338669504205">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8608167786217931" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">FoodTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="4082283374806064" type="FoodTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="7253065582703886" type="FoodTimer">
+                            <param id="0" name="Duration">FoodWater.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="3330627701880766">
             <conditions>
@@ -93,16 +129,28 @@
                     <param id="2" name="Object clicked">SendProfs</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="2077731075895506" type="SendPTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="1719226863604511" type="SendPTimer">
-                    <param id="0" name="Duration">SendProfs.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="5993717413582901">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1664044780003082" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">SendPTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="2077731075895506" type="SendPTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="1719226863604511" type="SendPTimer">
+                            <param id="0" name="Duration">SendProfs.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="4965257920961457">
             <conditions>
@@ -112,16 +160,28 @@
                     <param id="2" name="Object clicked">SendVolunteers</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="9889159428034135" type="SendVTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="7071988286400597" type="SendVTimer">
-                    <param id="0" name="Duration">SendVolunteers.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="9701116014413901">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6949120782514617" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">SendVTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="9889159428034135" type="SendVTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="7071988286400597" type="SendVTimer">
+                            <param id="0" name="Duration">SendVolunteers.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="4697832703005083">
             <conditions>
@@ -131,16 +191,80 @@
                     <param id="2" name="Object clicked">Supplies</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="1" name="Set visible" sid="6802842544100664" type="SuppliesTimer">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Timer" id="0" name="Start timer" sid="3377134725652139" type="SuppliesTimer">
-                    <param id="0" name="Duration">Supplies.Cooldown * SECONDS_IN_DAY</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;cooldown&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="355524357767851">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3663086881396409" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">SuppliesTimer.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set visible" sid="6802842544100664" type="SuppliesTimer">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="3377134725652139" type="SuppliesTimer">
+                            <param id="0" name="Duration">Supplies.Cooldown * SECONDS_IN_DAY</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9506003350359651">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8837333938287805" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">progress</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7962189134838122">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8633157970647336" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">progress.cost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4166272868961012" type="System">
+                            <param id="0" name="Variable">Budget</param>
+                            <param id="1" name="Value">progress.cost</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2232135260427962" type="System">
+                            <param id="0" name="Object to create">fadeTextRed</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">Mouse.X + 90</param>
+                            <param id="3" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="592682886367535" type="fadeTextRed">
+                            <param id="0" name="Text">&quot;-$&quot; &amp; progress.cost</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8952211581584048">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1628170247431148" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="6954811474646641" type="System">
+                            <param id="0" name="Object to create">fadeTextRed</param>
+                            <param id="1" name="Layer">5</param>
+                            <param id="2" name="X">Mouse.X + 90</param>
+                            <param id="3" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2066167616483354" type="fadeTextRed">
+                            <param id="0" name="Text">&quot;Not enough money!&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="8661093685395335">
             <conditions>
@@ -150,13 +274,35 @@
                 <action id="3" name="Set progress" sid="343749086767518" type="progress">
                     <param id="0" name="Value">(progress.Timer.CurrentTime(&quot;cooldown&quot;) / (progress.cooldown * SECONDS_IN_DAY)) * 100</param>
                 </action>
-                <action id="0" name="Set text" sid="8351197591196202" type="SickPop">
-                    <param id="0" name="Text">&quot;Sick : &quot; &amp; SickPop</param>
-                </action>
-                <action id="0" name="Set text" sid="2439625293033667" type="DisplacedPop">
-                    <param id="0" name="Text">&quot;Displaced :&quot; &amp; DisplacedPop</param>
+                <action id="0" name="Set text" sid="1231691850786505" type="Budget">
+                    <param id="0" name="Text">&quot;Budget: $&quot; &amp; Budget</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block sid="9934204223572225">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2972259274781316" type="System">
+                            <param id="0" name="Variable">Hidden</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8351197591196202" type="SickPop">
+                            <param id="0" name="Text">&quot;Sick/Injured: &quot; &amp; max(SickPop, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2439625293033667" type="DisplacedPop">
+                            <param id="0" name="Text">&quot;Displaced: &quot; &amp; max(DisplacedPop, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6296828151385092" type="MissingPop">
+                            <param id="0" name="Text">&quot;Missing: &quot; &amp; max(MissingPop, 0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="223326089741423" type="HungryPop">
+                            <param id="0" name="Text">&quot;Hungry: &quot; &amp; max(HungryPop, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="8608973044745152">
             <conditions>
@@ -167,19 +313,27 @@
             <actions>
                 <action id="-11" name="Subtract from" sid="5201365263531681" type="System">
                     <param id="0" name="Variable">DisplacedPop</param>
-                    <param id="1" name="Value">30 * Volunteers + 10 * Professionals</param>
+                    <param id="1" name="Value">Volunteers + Professionals</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="7989952966549529" type="System">
                     <param id="0" name="Variable">MissingPop</param>
-                    <param id="1" name="Value">10 * Volunteers</param>
+                    <param id="1" name="Value">Volunteers</param>
                 </action>
                 <action id="-10" name="Add to" sid="7690394192460333" type="System">
                     <param id="0" name="Variable">HungryPop</param>
-                    <param id="1" name="Value">1000</param>
+                    <param id="1" name="Value">100</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="696923556147488" type="System">
                     <param id="0" name="Variable">SickPop</param>
-                    <param id="1" name="Value">20*Professionals</param>
+                    <param id="1" name="Value">2*Professionals</param>
+                </action>
+                <action id="-10" name="Add to" sid="3693460254075943" type="System">
+                    <param id="0" name="Variable">Budget</param>
+                    <param id="1" name="Value">80</param>
+                </action>
+                <action id="-10" name="Add to" sid="9117381875637234" type="System">
+                    <param id="0" name="Variable">SickPop</param>
+                    <param id="1" name="Value">int(random(4))</param>
                 </action>
             </actions>
         </event-block>
@@ -195,12 +349,14 @@
                     <param id="0" name="Variable">HungryPop</param>
                     <param id="1" name="Value">150000</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="4455618005237122" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">5000</param>
-                </action>
                 <action id="1" name="Set visible" sid="3052604170625421" type="FoodTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="4825408622840014" type="FoodTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="257607602526693" type="FoodTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -216,12 +372,14 @@
                     <param id="0" name="Variable">Hidden</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="9245022484397808" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">50000</param>
-                </action>
                 <action id="1" name="Set visible" sid="1481242243404324" type="AssDmgTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="325542110855351" type="AssDmgTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="1979899612744309" type="AssDmgTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -233,12 +391,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="2033981774946981" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">100000</param>
-                </action>
                 <action id="1" name="Set visible" sid="5687998330297491" type="FixRTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="1317967252772083" type="FixRTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="7833896863033595" type="FixRTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -250,16 +410,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="9351697918587872" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">15000</param>
-                </action>
                 <action id="-10" name="Add to" sid="1021777755929439" type="System">
                     <param id="0" name="Variable">Professionals</param>
                     <param id="1" name="Value">3</param>
                 </action>
                 <action id="1" name="Set visible" sid="8739694354275877" type="SendPTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="8224078454345701" type="SendPTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="7282179777052057" type="SendPTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -275,12 +437,14 @@
                     <param id="0" name="Variable">Volunteers</param>
                     <param id="1" name="Value">5</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="1344218796967477" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">10000</param>
-                </action>
                 <action id="1" name="Set visible" sid="8493869151041071" type="SendVTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="3065270075297735" type="SendVTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="9366207266546834" type="SendVTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -294,18 +458,20 @@
             <actions>
                 <action id="-11" name="Subtract from" sid="3059892287023036" type="System">
                     <param id="0" name="Variable">DisplacedPop</param>
-                    <param id="1" name="Value">300</param>
+                    <param id="1" name="Value">1000</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="9858177786526897" type="System">
                     <param id="0" name="Variable">SickPop</param>
                     <param id="1" name="Value">1000</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="1987580402353257" type="System">
-                    <param id="0" name="Variable">Budget</param>
-                    <param id="1" name="Value">5000</param>
-                </action>
                 <action id="1" name="Set visible" sid="2539003353670442" type="SuppliesTimer">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action behavior="Timer" id="1" name="Stop timer" sid="3056328334797044" type="SuppliesTimer">
+                    <param id="0" name="Tag">&quot;cooldown&quot;</param>
+                </action>
+                <action id="3" name="Set progress" sid="4069251478923023" type="SuppliesTimer">
+                    <param id="0" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

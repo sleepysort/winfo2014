@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects />
@@ -213,7 +214,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="1406202688175859">
+        <object-type name="map" sid="1406202688175859">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3114688793034545" speed="5">
@@ -258,14 +259,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="1926839830983795">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8743647780691134" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="ButtonSprite" sid="7717657309809969">
             <plugin id="Sprite" />
             <animation-folder>
@@ -288,23 +281,31 @@
         <object-type name="Mouse" sid="8951444733751483">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Text" sid="4388127295470929">
+        <object-type name="TotalCasualties" sid="4388127295470929">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text2" sid="6061825924025527">
+        <object-type name="MissingPop" sid="6061825924025527">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text3" sid="3226017673898068">
+        <object-type name="HungryPop" sid="3226017673898068">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text4" sid="4127310037176633">
+        <object-type name="Label" sid="4127310037176633">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text5" sid="7310380490385828">
+        <object-type name="WhiteText" sid="7310380490385828">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Text6" sid="3491631662420826">
+        <object-type name="Budget" sid="3591997214813335">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="fadeTextRed" sid="4135997259475705">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="2935406799982436">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
     </object-folder>
     <families>
@@ -319,6 +320,7 @@
             </members>
             <instance-variables>
                 <instance-variable name="cooldown" sid="9290328761304194" type="number" />
+                <instance-variable name="cost" sid="7564401948845706" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="3443277289978911">
