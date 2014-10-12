@@ -148,6 +148,9 @@
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;cooldown&quot;</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="88348955635804" type="proAnim">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -178,6 +181,9 @@
                             <param id="0" name="Duration">SendVolunteers.Cooldown * SECONDS_IN_DAY</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;cooldown&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1302709577788222" type="volunteeranijm">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -417,6 +423,9 @@
                 <action id="1" name="Set visible" sid="8739694354275877" type="SendPTimer">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="1983440738592656" type="proAnim">
+                    <param id="0" name="Visibility">0</param>
+                </action>
                 <action behavior="Timer" id="1" name="Stop timer" sid="8224078454345701" type="SendPTimer">
                     <param id="0" name="Tag">&quot;cooldown&quot;</param>
                 </action>
@@ -445,6 +454,9 @@
                 </action>
                 <action id="3" name="Set progress" sid="9366207266546834" type="SendVTimer">
                     <param id="0" name="Value">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5722222255006278" type="volunteeranijm">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>

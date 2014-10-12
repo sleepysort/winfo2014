@@ -18,11 +18,14 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Viktor Korsun" id="waterbg">Water background</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -224,8 +227,41 @@
         <object-type name="map" sid="1406202688175859">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3114688793034545" speed="5">
-                    <frame duration="1" hotspotX="0.355" hotspotY="0.208372" original-source="C:\Users\Max\projects\winfo2014\assets\world.png">
+                <animation framecount="4" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="3114688793034545" speed="5">
+                    <frame duration="2" hotspotX="0.355" hotspotY="0.208372" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\worldmap.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.205521" />
+                            <point x="1" y="0.171779" />
+                            <point x="0.354776" y="0.779141" />
+                            <point x="0" y="0.601227" />
+                            <point x="0" y="0.205521" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.355" hotspotY="0.208372">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.205521" />
+                            <point x="1" y="0.171779" />
+                            <point x="0.354776" y="0.779141" />
+                            <point x="0" y="0.601227" />
+                            <point x="0" y="0.205521" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.355" hotspotY="0.208372">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.205521" />
+                            <point x="1" y="0.171779" />
+                            <point x="0.354776" y="0.779141" />
+                            <point x="0" y="0.601227" />
+                            <point x="0" y="0.205521" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="2" hotspotX="0.355" hotspotY="0.208372">
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
@@ -429,6 +465,194 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer10.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite9" sid="2454252589098322">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6856680136226695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="proAnim" sid="8576044763754944">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="4967500675119372">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4648779815255692" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\professionals.png">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite11" sid="8317116964533313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3225573336973671" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spawner" sid="338311518705733">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5368247682360579" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dest" sid="151316051373464">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1748340977173368" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="3924063794377338">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="WaterBackground">
+                    <effect id="waterbg" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525975821201536" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="volunteeranijm" sid="2852032066935256">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4750323638347097" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505" original-source="C:\Users\BPAK\projects\Winfo Hackathon\winfo2014\assets\Graphics\Animations\volunteer.png">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508" hotspotY="0.505">
+                        <collision-poly>
+                            <point x="0.261538" y="0.253731" />
+                            <point x="0.492308" y="0.179104" />
+                            <point x="0.707692" y="0.283582" />
+                            <point x="0.938462" y="0.492537" />
+                            <point x="0.707692" y="0.716418" />
+                            <point x="0.492308" y="0.955224" />
+                            <point x="0.246154" y="0.761194" />
+                            <point x="0.384615" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
